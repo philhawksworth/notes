@@ -2,9 +2,9 @@
   "name": "notes",
   "version": "1.0.0",
   "description": "",
-  "main": "parse-archive.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npx eleventy",
+    "start": "npx eleventy --serve --watch"
   },
   "keywords": [],
   "author": "",
