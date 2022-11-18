@@ -1,12 +1,8 @@
-const { EleventyEdgePlugin } = require("@11ty/eleventy");
 const sass = require("sass");
 
 
 
 module.exports = function(eleventyConfig) {
-  
-  // Add Eleventy Edge support
-  eleventyConfig.addPlugin(EleventyEdgePlugin);
   
   
   // Simple sass pipeline
