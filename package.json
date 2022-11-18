@@ -4,13 +4,14 @@
   "description": "",
   "scripts": {
     "build": "npx eleventy",
-    "start": "npx eleventy --serve --watch"
+    "dev": "npx eleventy --serve --watch"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@11ty/eleventy": "^2.0.0-canary.16",
+    "@netlify/functions": "^1.3.0",
     "sass": "^1.56.1"
   }
 }

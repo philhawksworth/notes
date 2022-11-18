@@ -17,7 +17,8 @@ permalink: "/notes/{{ pagination.pageNumber }}/index.html"
   </ol>
 </nav>
 
+
 {%- for item in pagination.items %}
-  {% render 'components/social-post.liquid' post:item %}
+  {% render 'components/social-post.liquid' post:notes[item] %}
 {% endfor -%}
 
