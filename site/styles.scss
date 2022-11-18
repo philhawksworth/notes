@@ -1,0 +1,26 @@
+@import '_includes/scss/fonts.scss';
+@import '_includes/scss/variables.scss';
+@import '_includes/scss/mixins.scss';
+@import '_includes/scss/utils.scss';
+
+
+.social-post {
+  margin:2em; 
+  padding: 2em;
+  background-color: #eee;
+  border-radius: 4px;
+
+  .meta-links {
+    list-style: none;
+    
+    li {
+      display: inline-block;
+    }
+  }
+
+  .avatar img {
+
+    
+  }
+
+}

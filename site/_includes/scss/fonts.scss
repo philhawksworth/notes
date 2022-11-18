@@ -1,0 +1,55 @@
+@font-face {
+  font-family: "Manrope VF";
+  src: url(/assets/fonts/Manrope[wght].woff2) format("woff2-variations");
+  font-style: normal;
+  font-variation-settings: "wght" 600;
+  font-variation-ligatures: normal;
+  font-weight: 200 800;
+}
+
+body {
+  font-family: "Manrope VF", Manrope, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+  font-variation-settings: "wght" 400;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.1em;
+}
+
+h1 {
+  font-size: 3em;
+  font-variation-settings: 'wght' 800;
+  letter-spacing: -.058em;
+}
+
+h2 {
+  font-size: 2em;
+  font-variation-settings: 'wght' 800;
+  letter-spacing: -.058em;
+}
+
+h3 {
+  font-size: 1.4em;
+  font-variation-settings: 'wght' 600;
+  letter-spacing: -.035em;
+}
+
+.lead {
+  font-variation-settings: "wght" 250;
+  font-size: 1.4em;
+  line-height: 1.6;
+}
+
+cite {
+  font-size: 1em;
+  font-variation-settings: "wght" 500;
+}
+
+.phonetic {
+  font-size: 1.8em;
+  font-variation-settings: 'wght' 600;
+  letter-spacing: -.058em;
+}

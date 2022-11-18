@@ -1,0 +1,12 @@
+---
+layout: layouts/base.liquid
+pagination:
+  data: notes
+  size: 1
+  alias: note
+permalink: "/note/{{ note.id }}/index.html"
+---
+
+
+{% render 'components/social-post.liquid' post:note %}
+

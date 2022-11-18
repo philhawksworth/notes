@@ -1,0 +1,17 @@
+$bp-narrow: "(min-width: 500px)";
+$bp-mid: "(min-width: 800px)";
+$bp-wide: "(min-width: 1200px)";
+:root {
+  --primaryLightestColor: #fff;
+  --primaryLightColor: #d3d8eb;
+  --primaryMidColor: #747796;
+  --primaryDarkColor: #303245;
+  --primaryDarkestColor: #1a1b29;
+  --goldDark: #766714;
+  --gold: #edd23c;
+  --goldFeint: #edd23c66;
+  --blue: #00d0ff;
+  --blueFeint: #00d0ff99;
+  --pink: #da2ce9;
+  --pinkFeint: #da2ce966;
+}

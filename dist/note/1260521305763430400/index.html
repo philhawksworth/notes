@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+
+<div class="social-post">
+
+  <ul class="meta-links">
+    <li><a href="/note/1260521305763430400">Permalink</a></li>
+    <li><a href="https://twitter.com/philhawksworth/status/1260521305763430400">Twitter</a></li>
+  </ul>
+
+  <a href="https://twitter.com/philhawksworth" class="avatar"><img src="" alt="A photo of Phil Hawksworth"></a>
+
+  
+    Replying to <a href="https://twitter.com/csswizardry/status/1260516053303656451">@csswizardry</a>
+  
+  <time datetime="2020-05-13 11:44">2020-05-13 11:44</time>
+  <div class="content">@csswizardry page.tags should already be an array, no?
+You shouldn’t need to manually split it or treat it as a string. 
+
+So you should be able to: 
+
+{% for tag in page.tags %}
+{{tag}}
+{% endfor %}</div>
+</div>
+
+
+
+</body>
+</html>
