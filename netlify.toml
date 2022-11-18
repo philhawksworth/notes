@@ -1,0 +1,12 @@
+[build] 
+  publish = "dist"
+  command = "npm run build"
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
+
+[[edge_functions]]
+  path = "/*"
+  function = "eleventy-edge"

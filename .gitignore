@@ -6,3 +6,4 @@ dist
 
 # exclude my original twitter archive  
 tweets.json
+node_modules
