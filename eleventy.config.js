@@ -3,7 +3,7 @@ const sass = require("sass");
 module.exports = function(eleventyConfig) {
 
   // Just pass some assets through directly
-  eleventyConfig.addPassthroughCopy({ "site/img": "/img" });
+  eleventyConfig.addPassthroughCopy({ "site/notes-img": "/notes-img" });
   
   // Simple sass pipeline
   eleventyConfig.addTemplateFormats("scss");
