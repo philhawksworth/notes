@@ -2,23 +2,33 @@
 layout: layouts/base.liquid
 pagination:
   data: notes
-  size: 50
+  size: 20
 permalink: "/notes/{{ pagination.pageNumber }}/index.html"
 ---
 
 <h1>Notes page {% if pagination.pageNumber != 0 %}{{pagination.pageNumber}} {% endif %}</h1>
 
 <nav aria-labelledby="my-pagination">
-  <ol>
+  <ul>
     <li>{% if page.url != pagination.href.first %}<a href="{{ pagination.href.first }}">Newest</a>{% else %}Newest{% endif %}</li>
     <li>{% if pagination.href.previous %}<a href="{{ pagination.href.previous }}">Previous</a>{% else %}Previous{% endif %}</li>
     <li>{% if pagination.href.next %}<a href="{{ pagination.href.next }}">Next</a>{% else %}Next{% endif %}</li>
     <li>{% if page.url != pagination.href.last %}<a href="{{ pagination.href.last }}">Oldest</a>{% else %}Oldest{% endif %}</li>
-  </ol>
+  </ul>
 </nav>
 
 
 {%- for item in pagination.items %}
-  {% render 'components/social-post.liquid' post:notes[item] %}
+  {% render 'components/social-post.liquid' post:item %}
 {% endfor -%}
 
+
+
+<nav aria-labelledby="my-pagination">
+  <ul>
+    <li>{% if page.url != pagination.href.first %}<a href="{{ pagination.href.first }}">Newest</a>{% else %}Newest{% endif %}</li>
+    <li>{% if pagination.href.previous %}<a href="{{ pagination.href.previous }}">Previous</a>{% else %}Previous{% endif %}</li>
+    <li>{% if pagination.href.next %}<a href="{{ pagination.href.next }}">Next</a>{% else %}Next{% endif %}</li>
+    <li>{% if page.url != pagination.href.last %}<a href="{{ pagination.href.last }}">Oldest</a>{% else %}Oldest{% endif %}</li>
+  </ul>
+</nav>

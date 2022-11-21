@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "build": "npx eleventy",
-    "dev": "npx eleventy --serve --watch"
+    "dev": "npx eleventy --watch --quiet"
   },
   "keywords": [],
   "author": "",

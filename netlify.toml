@@ -8,6 +8,6 @@
 
 [[redirects]]
   from = "/note/*"
-  to = "/.netlify/functions/note"
+  to = "/.netlify/functions/view-note"
   status = 200
 

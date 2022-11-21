@@ -1,7 +1,7 @@
 const fs = require('fs');
 const data = require('./tweets.json');
 
-var tweets = {};
+var tweets = [];
 
 const exclude = [
   "1592471685252644864",
@@ -19,20 +19,23 @@ for (let t = 0; t < data.length; t++) {
 
   if(!exclude.includes(tweet.id)) {
    
-    tweets[tweet.id] = {
+    tweets.push({
       "id": tweet.id,
       "created_at": tweet.created_at,
       "full_text": tweet.full_text,
       "urls": tweet.entities?.urls || null,
       "in_reply_to_status_id": tweet.in_reply_to_status_id || null,
       "in_reply_to_screen_name": tweet.in_reply_to_screen_name || null
-    };
+    });
   }
 
 }
 
 console.log(data.length);
 console.log(tweets.length);
+
+
+// tweets.sort((a, b) => (a.created_at > b.created_at) ? 1 : -1)
 
 
 fs.writeFile('site/_data/notes.json', JSON.stringify(tweets), err => {
