@@ -31,26 +31,10 @@ for (let t = 0; t < data.length; t++) {
 
 }
 
-console.log(data.length);
-console.log(tweets.length);
-
-
-// tweets.sort((a, b) => (a.created_at > b.created_at) ? 1 : -1)
-
 
 fs.writeFile('site/_data/notes.json', JSON.stringify(tweets), err => {
   if (err) {
     console.error(err);
   }
   console.error("Notes saved");
-
 });
-
-
-// {
-//   "id" : "1592501775491563521",
-//   "in_reply_to_status_id" : "1592500774747402243",
-//       "created_at" : "Tue Nov 15 12:56:25 +0000 2022",
-//       "full_text" : "@mahemoff Yeah, I'm very concerned about this at the moment. I requested my data export yesterday, and am nervously awaiting it.\n\nOnce I have that archive self-hosted, I may even delete my content from twitter because I'm so concerned about the integrity and compliance there now.",
-      
-// }

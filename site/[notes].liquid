@@ -3,10 +3,12 @@ layout: layouts/base.liquid
 pagination:
   data: notes
   size: 20
-permalink: "/notes/{{ pagination.pageNumber }}/index.html"
+permalink: "/notes/{{ pagination.pageNumber | plus: 1 }}/index.html"
 ---
 
-<h1>Notes page {% if pagination.pageNumber != 0 %}{{pagination.pageNumber}} {% endif %}</h1>
+<h1>Notes page {% if pagination.pageNumber != 0 %}{{pagination.pageNumber | plus: 1 }} {% endif %}</h1>
+
+
 
 <nav aria-labelledby="my-pagination">
   <ul>

@@ -1,9 +1,12 @@
-# Local Netlify folder
-.netlify
-
+# dependecies and output
 node_modules
 dist
 
+# Local Netlify folder
+.netlify
+
 # exclude my original twitter archive  
 tweets.json
-node_modules
+
+# Eleventy Edge Build Data files
+netlify/edge-functions/_generated
