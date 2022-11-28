@@ -1,38 +1,14 @@
-const inreply = function(post) {
-  if(post.in_reply_to_status_id) {
+const inreply = function (post) {
+  if (post.in_reply_to_status_id) {
     return `replying to <a href="https://twitter.com/${post.in_reply_to_screen_name}/status/${post.in_reply_to_status_id}">@${post.in_reply_to_screen_name}</a>`
   }
 }
 
-const formatDate = function(dateStamp) {
-
-  console.log(dateStamp);
-  
-  const date = new Date(dateStamp)
-  
-  console.log(date);
-
-  // 15 Nov, 2022 at 2:44 pm
-
-  const month = [
-    "Jan",
-    "Feb",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July",
-    "Aug",
-    "Sept",
-    "Oct",
-    "Nov",
-    "Dec"
-  ]
-
-
+const formatDate = function (dateStamp) {
+  const date = new Date(dateStamp);
+  const month = ["Jan","Feb","March","April","May","June","July","Aug","Sept","Oct","Nov","Dec"];
   return `${date.getDate()} ${month[date.getMonth()]}, ${date.getFullYear()}`;
 }
-
 
 
 module.exports = (post) => `
@@ -47,21 +23,23 @@ module.exports = (post) => `
 
     <div class="social-post">
 
-      <a href="https://twitter.com/philhawksworth" class="avatar"><img src="/notes-img/philhawksworth-avatar.jpg" alt="A photo of Phil Hawksworth's face"></a>
+      <a href="https://twitter.com/philhawksworth" class="avatar">
+        <img src="/notes-img/philhawksworth-avatar.jpg" alt="A photo of Phil Hawksworth's face">
+      </a>
 
-      <div class="meta">
-        <span class="author-name">Phil Hawksworth</span>
-        <a href="https://twitter.com/philhawksworth" class="author-handle">@philhawksworth</a> &#8226;
-        <time datetime="${post.created_at}"><a href="https://twitter.com/philhawksworth/status/${post.id}">${formatDate(post.created_at)}</a></time>
-
-        ${inreply(post)}
-
+      <div class="main">
+        <div class="meta">
+          <span class="author-name">Phil Hawksworth</span>
+          <a href="https://twitter.com/philhawksworth" class="author-handle">@philhawksworth</a> &#8226;
+          <time datetime="${post.created_at}"><a href="https://twitter.com/philhawksworth/status/${post.id}">${formatDate(post.created_at)}</a></time>
+          ${inreply(post)}
+        </div>
+        <div class="content">${post.full_text}</div>
+        <ul class="permalinks">
+          <li><a href="/note/${post.id}">Permalink</a></li>
+          <li><a href="https://twitter.com/philhawksworth/status/${post.id}">Twitter</a></li>
+        </ul>
       </div>
-      <div class="content">${ post.full_text }</div>
-      <ul class="permalinks">
-        <li><a href="/note/${post.id}">Permalink</a></li>
-        <li><a href="https://twitter.com/philhawksworth/status/${post.id}">Twitter</a></li>
-      </ul>
     </div>
 
   </body
