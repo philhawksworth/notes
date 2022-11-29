@@ -5,8 +5,6 @@
 
 
 
-
-
 .social-post {
   margin:1em; 
   padding: 2em;
@@ -31,19 +29,13 @@
     text-underline-offset: 4px;
     text-decoration-color: #96a3d4;
     word-wrap: break-word;
+    border-bottom-style: none;
   }
 
   a:hover,
   a:focus {
     color: #3355cc;
     text-decoration: underline;
-  }
-
-  a.avatar:link,
-  a.avatar:visited,
-  a.avatar:hover,
-  a.avatar:focus {
-    text-decoration: none;
   }
 
   .meta {
@@ -116,6 +108,10 @@
 
 nav ul {
   list-style: none;
+  background-color: #1111112d;
+  border-radius: 4px;
+  text-align: center;
+  padding: 0.5rem;
 
   li {
     display: inline;

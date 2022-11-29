@@ -75,16 +75,16 @@ for (let t = 0; t < data.length; t++) {
       // // replace the shortened t.co urls in the text with their original
       for(link in links) {
         let re = new RegExp(String.raw`${link}`);
-        // tweet.full_text = tweet.full_text.replace(re, `<a href="${links[link]}">${links[link]}</a>`);  
-        tweet.full_text = tweet.full_text.replace(re, `MEDIA EMBED (${links[link].type})`);  
+        tweet.full_text = tweet.full_text.replace(re, ``);  
       }
     }
 
-
+    // console.log(new Date(tweet.created_at));
+    
 
     tweets.push({
       "id": tweet.id,
-      "created_at": tweet.created_at,
+      "created_at": new Date(tweet.created_at),
       "full_text": tweet.full_text,
       "urls": tweet.entities?.urls || null,
       "in_reply_to_status_id": tweet.in_reply_to_status_id || null,
@@ -93,8 +93,10 @@ for (let t = 0; t < data.length; t++) {
     });
   }
 
+  
 }
 
+tweets.sort((a, b) => (Number(a.created_at) < Number(b.created_at)) ? 1 : -1);
 
 fs.writeFile('site/_data/notes.json', JSON.stringify(tweets), err => {
   if (err) {
