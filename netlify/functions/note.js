@@ -1,5 +1,5 @@
 const pageTemplate = require('./page/template.js');
-const notes = require('../../site/_data/notes');
+const notes = require('../../site/_data/notes.json');
 const { builder } = require('@netlify/functions');
 
 const handler = async(event) => {
