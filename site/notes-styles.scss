@@ -1,7 +1,7 @@
-@import '_includes/scss/fonts.scss';
-@import '_includes/scss/variables.scss';
-@import '_includes/scss/mixins.scss';
-@import '_includes/scss/utils.scss';
+// @import '_includes/scss/fonts.scss';
+// @import '_includes/scss/variables.scss';
+// @import '_includes/scss/mixins.scss';
+// @import '_includes/scss/utils.scss';
 
 
 
@@ -12,13 +12,14 @@
   padding: 2em;
   background-color: #f3f3f3;
   border-radius: 4px;
-
   display: flex;
+  align-items: flex-start;
   
 
   .main {
     padding-top:0.75rem;
     flex-grow: 1;
+    background-color: inherit;
   }
 
 
@@ -38,9 +39,17 @@
     text-decoration: underline;
   }
 
+  a.avatar:link,
+  a.avatar:visited,
+  a.avatar:hover,
+  a.avatar:focus {
+    text-decoration: none;
+  }
+
   .meta {
     display: inline-block;
     color: #777;
+    padding-top:0.75rem;
 
     a:link,
     a:visited {
