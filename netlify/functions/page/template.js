@@ -1,8 +1,19 @@
 const inreply = function (post) {
   if (post.in_reply_to_status_id) {
-    return `replying to <a href="https://twitter.com/${post.in_reply_to_screen_name}/status/${post.in_reply_to_status_id}">@${post.in_reply_to_screen_name}</a>`
+    return `replying to <a href="https://twitter.com/${post.in_reply_to_screen_name}/status/${post.in_reply_to_status_id}">this from @${post.in_reply_to_screen_name}</a>`
   }
 }
+
+const embedMedia = function (media) {
+  let html = [];
+    media.forEach(item => {
+      html.push(`<img src="${item}" alt="Embedded image from Twitter" />`)
+    });
+    return html;
+}
+
+
+
 
 const formatDate = function (dateStamp) {
   const date = new Date(dateStamp);
@@ -35,6 +46,10 @@ module.exports = (post) => `
           ${inreply(post)}
         </div>
         <div class="content">${post.full_text}</div>
+        <div class="media">
+        ${embedMedia(post.media)}
+        </div>
+        
         <ul class="permalinks">
           <li><a href="/note/${post.id}">Permalink</a></li>
           <li><a href="https://twitter.com/philhawksworth/status/${post.id}">Twitter</a></li>

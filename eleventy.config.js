@@ -4,7 +4,7 @@ module.exports = function(eleventyConfig) {
 
   // Just pass some assets through directly
   eleventyConfig.addPassthroughCopy({ "site/notes-img": "/notes-img" });
-  
+    
   // Simple sass pipeline
   eleventyConfig.addTemplateFormats("scss");
   eleventyConfig.addExtension("scss", {

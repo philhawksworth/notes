@@ -14,10 +14,11 @@
   border-radius: 4px;
 
   display: flex;
+  
 
   .main {
     padding-top:0.75rem;
-    width: 100%;
+    flex-grow: 1;
   }
 
 
@@ -28,6 +29,7 @@
     text-decoration-style: solid;
     text-underline-offset: 4px;
     text-decoration-color: #96a3d4;
+    word-wrap: break-word;
   }
 
   a:hover,
@@ -90,6 +92,10 @@
 
   .content {
     margin:2em 0 1em;
+  }
+
+  .media img {
+    width:100%;
   }
 
 }
