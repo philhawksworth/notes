@@ -9,7 +9,7 @@ permalink: /notes/search/index.html
 
 {{ eleventy.edge | json}}
 
-<h2>{{filteredNotes.results.length}} notes containing "{{ filteredNotes.filter }}" </h2>
+{% comment %} <h2>{{filteredNotes.results.length}} notes containing "{{ filteredNotes.filter }}" </h2>
 
 {% assign searchTerm = eleventy.edge.path | split: "notes/search/"   %}
 
@@ -42,7 +42,7 @@ term: {{ searchTerm | last }}
       </div>
   </div>
 
-{% endfor -%}
+{% endfor -%} {% endcomment %}
 
 
 {% endedge %}

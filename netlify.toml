@@ -8,7 +8,7 @@
 
 [[edge_functions]]
   function = "eleventy-edge"
-  path = "/notes/search/*"
+  path = "/notes/search*"
 
 [[redirects]]
   from = "/notes/search/*"
