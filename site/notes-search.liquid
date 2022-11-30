@@ -1,0 +1,21 @@
+---
+layout: layouts/base.liquid
+permalink: /notes/search/index.html
+---
+
+The content outside of the `edge` shortcode is generated with the Build.
+
+{% edge %}
+The content inside of the `edge` shortcode is generated on the Edge.
+
+<pre>
+{{ eleventy | json }}
+</pre>
+
+{{ notes.first | json }}
+
+<h1>{{filteredNotes.results.length}} notes containing "{{ filteredNotes.filter }}" </h1>
+
+{{ filteredNotes.results | json }}
+
+{% endedge %}

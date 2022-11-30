@@ -6,8 +6,12 @@
   publish = "dist"
   command = "npm run dev"
 
+[[edge_functions]]
+  function = "eleventy-edge"
+  path = "/notes/search"
+
 [[redirects]]
-  from = "/notes/"
+  from = "/notes"
   to = "/notes/1/"
   status = 301
 
@@ -15,3 +19,5 @@
   from = "/note/tw/*"
   to = "/.netlify/functions/note-tweet"
   status = 200
+
+

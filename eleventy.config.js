@@ -1,6 +1,9 @@
+const { EleventyEdgePlugin } = require("@11ty/eleventy");
 const sass = require("sass");
 
 module.exports = function(eleventyConfig) {
+
+  eleventyConfig.addPlugin(EleventyEdgePlugin);
 
   // Just pass some assets through directly
   eleventyConfig.addPassthroughCopy({ "site/notes-img": "/notes-img" });
