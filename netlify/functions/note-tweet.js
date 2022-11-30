@@ -5,7 +5,7 @@ const { builder } = require('@netlify/functions');
 const handler = async(event) => {
   
     // get the note ID from the request
-    const noteID = event.path.split("note/")[1];
+    const noteID = event.path.split("note/tw/")[1];
     console.log(`lookup ${noteID}`);
     
     const note = notes.find(x => x.id === noteID)

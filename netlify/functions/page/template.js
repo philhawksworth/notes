@@ -51,7 +51,7 @@ module.exports = (post) => `
         </div>
         
         <ul class="permalinks">
-          <li><a href="/note/${post.id}">Permalink</a></li>
+          <li><a href="/note/tw/${post.id}">Permalink</a></li>
           <li><a href="https://twitter.com/philhawksworth/status/${post.id}">Twitter</a></li>
         </ul>
       </div>

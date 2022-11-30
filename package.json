@@ -1,7 +1,7 @@
 {
   "name": "notes",
   "version": "1.0.0",
-  "description": "",
+  "description": "An archive of tweets posted by Phil Hawksworth",
   "scripts": {
     "build": "npx eleventy",
     "dev": "npx eleventy --watch --quiet"

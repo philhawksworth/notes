@@ -12,6 +12,6 @@
   status = 301
 
 [[redirects]]
-  from = "/note/*"
-  to = "/.netlify/functions/note"
+  from = "/note/tw/*"
+  to = "/.netlify/functions/note-tweet"
   status = 200
