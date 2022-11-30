@@ -15,12 +15,12 @@ export default async (request, context) => {
       // default is [], add more keys to opt-in e.g. ["appearance", "username"]
       cookies: [],
     });
-
-    console.log({edge});
     
-
-    const url = new URL(request.url);
-    const searchStr = url.searchParams.get("str");
+    
+    // const url = new URL(request.url);
+    // const searchStr = url.searchParams.get("str");
+    // const searchStr = edge.path.split("/notes/search/")[0];
+    const searchStr = "netlify";
     let filteredNotes = {
       filter: searchStr,
       results: []
@@ -29,6 +29,9 @@ export default async (request, context) => {
       console.log("search for ", searchStr );
       filteredNotes.results = notes.filter(e => e.full_text.indexOf(searchStr) !== -1);
     }
+
+    console.log(`results: ${filteredNotes.results.length}`);
+    
     
     edge.config((eleventyConfig) => {
       // Add some custom Edge-specific configuration

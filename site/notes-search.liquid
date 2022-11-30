@@ -11,6 +11,10 @@ permalink: /notes/search/index.html
 
 <h2>{{filteredNotes.results.length}} notes containing "{{ filteredNotes.filter }}" </h2>
 
+{% assign searchTerm = eleventy.edge.path | split: "notes/search/"   %}
+
+term: {{ searchTerm | last }}
+
 {%- for post in filteredNotes.results %}
 
   <div class="social-post">
