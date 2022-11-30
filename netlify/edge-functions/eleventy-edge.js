@@ -16,6 +16,8 @@ export default async (request, context) => {
       cookies: [],
     });
 
+    context.log(request);
+
 
     const url = new URL(request.url);
     const searchStr = url.searchParams.get("str");
