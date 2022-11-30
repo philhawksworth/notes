@@ -3,9 +3,10 @@ layout: layouts/base.liquid
 permalink: /notes/search/index.html
 ---
 
+<h1>Search results</h1>
 
 {% edge %}
 
-<h1>{{filteredNotes.results.length}} notes containing "{{ filteredNotes.filter }}" </h1>
+<h2>{{filteredNotes.results.length}} notes containing "{{ filteredNotes.filter }}" </h2>
 {{ filteredNotes.results | json }}
 {% endedge %}
