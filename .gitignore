@@ -10,3 +10,5 @@ tweets.json
 
 # Eleventy Edge Build Data files
 netlify/edge-functions/_generated
+
+/**/.DS_Store
