@@ -3,7 +3,7 @@ import {
   precompiledAppData,
 } from "./_generated/eleventy-edge-app.js";
 
-import notes from "../../site/_data/notes.json" assert {type: 'json'}; 
+// import notes from "../../site/_data/notes.json" assert {type: 'json'}; 
 
 export default async (request, context) => {
   try {
@@ -27,7 +27,7 @@ export default async (request, context) => {
     };
     if(searchStr) {
       console.log("search for ", searchStr );
-      filteredNotes.results = notes.filter(e => e.full_text.indexOf(searchStr) !== -1);
+      // filteredNotes.results = notes.filter(e => e.full_text.indexOf(searchStr) !== -1);
     }
 
     console.log(`results: ${filteredNotes.results.length}`);
@@ -36,7 +36,7 @@ export default async (request, context) => {
     edge.config((eleventyConfig) => {
       // Add some custom Edge-specific configuration
       eleventyConfig.addGlobalData("filteredNotes", filteredNotes);
-      eleventyConfig.addGlobalData("notes", notes);
+      // eleventyConfig.addGlobalData("notes", notes);
     });
 
     return await edge.handleResponse();
