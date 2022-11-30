@@ -7,6 +7,11 @@ permalink: "/notes/{{ pagination.pageNumber | plus: 1 }}/index.html"
 ---
 
 
+
+{% edge "liquid" %}
+{{ eleventy.edge | json}}
+{% endedge %}
+
 {%- for item in pagination.items %}
   {% render 'components/social-post.liquid' post:item %}
 {% endfor -%}
