@@ -10,10 +10,10 @@
   function = "eleventy-edge"
   path = "/notes/search*"
 
-[[redirects]]
-  from = "/notes/search/*"
-  to = "/notes/search/"
-  status = 200
+# [[redirects]]
+#   from = "/notes/search/*"
+#   to = "/notes/search/:splat"
+#   status = 200
 
 
 [[redirects]]

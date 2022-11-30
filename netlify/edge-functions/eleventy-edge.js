@@ -20,22 +20,22 @@ export default async (request, context) => {
     // const url = new URL(request.url);
     // const searchStr = url.searchParams.get("str");
     // const searchStr = edge.path.split("/notes/search/")[0];
-    const searchStr = "netlify";
-    let filteredNotes = {
-      filter: searchStr,
-      results: []
-    };
-    if(searchStr) {
-      console.log("search for ", searchStr );
-      // filteredNotes.results = notes.filter(e => e.full_text.indexOf(searchStr) !== -1);
-    }
+    // const searchStr = "netlify";
+    // let filteredNotes = {
+    //   filter: searchStr,
+    //   results: []
+    // };
+    // if(searchStr) {
+    //   console.log("search for ", searchStr );
+    //   // filteredNotes.results = notes.filter(e => e.full_text.indexOf(searchStr) !== -1);
+    // }
 
-    console.log(`results: ${filteredNotes.results.length}`);
+    // console.log(`results: ${filteredNotes.results.length}`);
     
     
     edge.config((eleventyConfig) => {
       // Add some custom Edge-specific configuration
-      eleventyConfig.addGlobalData("filteredNotes", filteredNotes);
+      // eleventyConfig.addGlobalData("filteredNotes", filteredNotes);
       // eleventyConfig.addGlobalData("notes", notes);
     });
 
