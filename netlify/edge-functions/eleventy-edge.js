@@ -16,8 +16,8 @@ export default async (request, context) => {
       cookies: [],
     });
 
-    context.log(request);
-
+    console.log({edge});
+    
 
     const url = new URL(request.url);
     const searchStr = url.searchParams.get("str");
@@ -30,13 +30,8 @@ export default async (request, context) => {
       filteredNotes.results = notes.filter(e => e.full_text.indexOf(searchStr) !== -1);
     }
     
-
-
-
     edge.config((eleventyConfig) => {
       // Add some custom Edge-specific configuration
-      // e.g. Fancier json output
-      // eleventyConfig.addFilter("json", obj => JSON.stringify(obj, null, 2));
       eleventyConfig.addGlobalData("filteredNotes", filteredNotes);
       eleventyConfig.addGlobalData("notes", notes);
     });
