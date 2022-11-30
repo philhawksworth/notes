@@ -8,13 +8,7 @@
 
 [[edge_functions]]
   function = "eleventy-edge"
-  path = "/notes/search*"
-
-# [[redirects]]
-#   from = "/notes/search/*"
-#   to = "/notes/search/:splat"
-#   status = 200
-
+  path = "/*"
 
 [[redirects]]
   from = "/notes"

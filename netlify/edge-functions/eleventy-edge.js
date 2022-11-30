@@ -16,8 +16,14 @@ export default async (request, context) => {
       cookies: [],
     });
     
-    
-    // const url = new URL(request.url);
+    const url = new URL(request.url);
+    // console.log({url});
+
+    if(url.pathname.startsWith("/notes/search/")) {
+      console.log(`we're searching`);
+      
+    }
+
     // const searchStr = url.searchParams.get("str");
     // const searchStr = edge.path.split("/notes/search/")[0];
     // const searchStr = "netlify";
