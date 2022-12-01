@@ -9,13 +9,16 @@ permalink: /notes/search/index.html
 
 {{ eleventy.edge | json}}
 
-{% comment %} <h2>{{filteredNotes.results.length}} notes containing "{{ filteredNotes.filter }}" </h2>
+ <h2>{{filteredNotes.results.length}} notes containing "{{ filteredNotes.filter }}" </h2>
 
+
+{% comment %}
 {% assign searchTerm = eleventy.edge.path | split: "notes/search/"   %}
 
 term: {{ searchTerm | last }}
 
 {%- for post in filteredNotes.results %}
+
 
   <div class="social-post">
     <a href="https://twitter.com/philhawksworth" class="avatar"><img src="/notes-img/philhawksworth-avatar.jpg" alt="A photo of Phil Hawksworth's face">
